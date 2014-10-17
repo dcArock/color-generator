@@ -1,0 +1,22 @@
+#wrapper {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%; }
+  #wrapper .color {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: black; }
+  #wrapper .color1 {
+    left: 0;
+    right: 70%; }
+  #wrapper .color2 {
+    left: 35%;
+    right: 35%; }
+  #wrapper .color3 {
+    right: 0;
+    left: 70%; }
+
+/*# sourceMappingURL=global.css.map */

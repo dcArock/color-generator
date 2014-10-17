@@ -1,0 +1,125 @@
+@media screen and (max-width: 480px) {
+	#wrapper {
+		position: fixed;
+		top: 5px;
+		left: 5px;
+		right: 5px;
+		bottom: 5px;
+		.color {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			.header {
+				.logo1 {
+					width: 80%;
+					max-width: 100px;
+				}
+				.logo2 {
+					width: 80%;
+					max-width: 100px;
+					padding-bottom: 10%;
+				}
+				.logo3 img {
+					display: none;
+				}
+			}
+			.hexText {
+				transform: rotate(-90deg);
+			}
+		}
+		.color1 {
+			left: 0;
+			right: 70%;
+		}
+		.color2 {
+			left: 35%;
+			right: 35%;
+		}
+		.color3 {
+			right: 0;
+			left: 70%;
+		}
+	}
+	#menu {
+		.menuContainer {
+			width: 90%;
+			max-width: 90%;
+			.logo {
+				width: 50%;
+			}
+			.logo1 {
+				max-width: 120px;
+			}
+			.button {
+				width: 200px;
+			}
+			.with-love {
+				width: 55%;
+			}
+		}
+	}
+	.hidden-xs {
+		display: none !important;
+	}
+}
+
+@media screen and (min-width: 481px) {
+	#wrapper {
+		position: fixed;
+		top: 5%;
+		left: 5%;
+		right: 5%;
+		bottom: 5%;
+		.color {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			.header {
+				.logo1 {
+					width: 50%;
+					max-width: 70px;
+				}
+				.logo2 {
+					width: 30%;
+					max-width: 50px;
+					padding-bottom: 10%;
+				}
+				.logo3 {
+					width: 90%;
+					max-width: 400px;
+				}
+			}
+		}
+		.color1 {
+			left: 0;
+			right: 70%;
+		}
+		.color2 {
+			left: 35%;
+			right: 35%;
+		}
+		.color3 {
+			right: 0;
+			left: 70%;
+		}
+	}
+	#menu {
+		.menuContainer {
+			width: 50%;
+			max-width: 480px;
+			.logo {
+				width: 50%;
+			}
+			.logo1 {
+				max-width: 160px;
+			}
+			.button {
+				width: 200px;
+			}
+			.with-love {
+				width: 80%;
+				max-width: 200px;
+			}
+		}
+	}
+}

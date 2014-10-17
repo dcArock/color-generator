@@ -1,0 +1,206 @@
+body {
+	overflow: hidden;
+	font-size: 16px;
+}
+
+body.black {
+	background: $black;
+}
+
+body, .color, .hexText, path, img {
+	transition: .5s all ease;
+}
+
+img, svg {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+img:hover, path:hover {
+
+	opacity: .9
+	
+}
+
+.svg-shadow.blackSvg {
+
+	fill: rgba(255,255,255,.1);
+	
+}
+
+.svg-fill.blackSvg {
+	fill: black;	
+}
+
+#flash {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: white;
+	z-index: 99;
+	.container {
+		width: 100%;
+		max-width: 400px;
+		margin: auto;
+		position: relative;
+		img, svg {
+			display: block;
+			margin: auto;
+		}
+	}
+}
+
+#wrapper {
+	.color {
+		background: #131313;
+		p {
+			font-family: 'Consolas', 'Helvetica Neue', Helvetica Neue, sans-serif;
+			letter-spacing: .1em;
+			position: relative;
+			transition: none;
+			line-height: .75em;
+			text-shadow: 1px 1px 0.25px rgba(0, 0, 0, 0.25);
+		}
+		.hexText.black {
+			color: black !important;
+			text-shadow: none;
+		}
+		.hexText {
+			cursor: pointer;
+		}
+		.p300 {
+			font-weight: 300;
+		}
+		.p700 {
+			font-weight: 700;
+		}
+		.hex {
+			position: absolute;
+			bottom: 5%;
+			left: 0;
+			right: 0;
+			margin-top: -.5em;
+			color: $text;
+		}
+		.random {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			height: 80px;
+			margin-top: -40px;
+			.icon {
+				width: 50%;
+				max-width: 80px;
+				max-height: 80px;
+				margin: auto;
+				cursor: pointer;
+				&:hover {
+					animation: 1s glow;
+					animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+					-ms-animation: none;
+				}
+			}
+			.glow {
+				animation: 8s logo linear infinite;
+				animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+			}
+		}
+		.header {
+			color: $text;
+			position: absolute;
+			top: 5%;
+			left: 0;
+			right: 0;
+			.logo {
+				display: block;
+				margin: auto;
+			}
+			.logo2 {
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+#menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(13,13,13, 0.95);
+	.menuContainer {
+		position: relative;
+		margin: auto;
+		.logo {
+			margin: auto;
+		}
+		.button {
+			margin: auto;
+		}
+		.with-love {
+			margin: auto;
+		}
+	}
+	.menu-close {
+		position: absolute;
+		top: 5%;
+		right: 5%;
+		width: 50px;
+		height: 50px;
+		cursor: pointer;
+		z-index: 9999;
+		&:hover {
+			animation-duration: 2s;
+			animation-name: logo;
+		}
+	}
+}
+
+#copy {
+	position: fixed;
+	top: 75%;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	p {
+		position: absolute;
+		text-align: center;
+		color: white;
+		font-family: 'Consolas', 'Helvetica Neue', Helvetica Neue, sans-serif;
+	}
+}
+
+.animate {
+	animation-duration: 2s;
+	animation-name: logo;
+	animation-fill-mode: both;
+}
+
+@keyframes glow {
+	from {
+		transform: rotate(0deg) scale(1);
+	}
+	70% {
+		transform: rotate(360deg) scale(0.75);
+	}
+	to {
+		transform: rotate(0) scale(1);
+	}
+}
+
+
+@keyframes logo {
+	0%, 100% {
+		transform: translate3d(0, 0, 0);
+	}
+	10%, 30%, 50%, 70%, 90% {
+		transform: translate3d(-5px, 0, 0);
+	}
+	20%, 40%, 60%, 80% {
+		transform: translate3d(5px, 0, 0);
+	}
+}
